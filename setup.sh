@@ -1,0 +1,78 @@
+#!/bin/bash
+
+
+
+# Terminal colors
+red_color=`tput setaf 1`
+green_color=`tput setaf 2`
+yellow_color=`tput setaf 3`
+blue_color=`tput setaf 4`
+magenta_color=`tput setaf 5`
+cyan_color=`tput setaf 6`
+reset_color=`tput sgr0`
+
+red() {  echo "${red_color}* $1 \n${reset}"; }
+
+# for headers (like h1 in html)
+green() {  echo "${green}* $1 \n${reset}"; }
+yellow() {  echo "${yellow}* $1 \n${reset}"; }
+# reset back to home directory
+blue() { cd ~; echo "${blue}* $1 \n${reset}"; }
+magenta() {  echo "${magenta}* $1 \n${reset}"; }
+cyan() {  echo "${cyan}* $1 \n${reset}"; }
+
+blue 'chmoding personalbin'
+cd .personalbin
+chmod +x gc gd gi gp
+
+blue 'adding pop os shortcuts'
+`dconf load /org/gnome/shell/extensions/pop-shell/ < pop-shell.ini`
+rm pop-shell.ini
+
+green 'installing dev tools'
+sudo apt update && sudo apt upgrade -y 
+
+blue 'installing git'
+sudo apt install -y git
+
+blue 'installing xclip'
+sudo apt install -y xclip
+
+blue 'installing konsole'
+sudo apt install -y konsole
+
+blue 'installing fish'
+sudo apt install -y fish
+
+blue 'installing docker'
+sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg-agent \
+    software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository \
+    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+    $(lsb_release -cs) \
+    stable"
+sudo apt-get update
+sudo apt-get install -y docker-ce docker-ce-cli docker-compose containerd.io    
+sudo docker run hello-world
+# setup docker non root
+
+blue 'installing vscode'
+sudo apt install -y snap
+sudo snap install code --classic
+
+
+blue 'installing brave'
+sudo apt install apt-transport-https curl gnupg
+curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
+echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+sudo apt update
+sudo apt install brave-browser
+
+# Remove .git (do this after stable)
+# rm -rf .git
+

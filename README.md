@@ -8,14 +8,21 @@ This contains all my personalization for a custom linux distribuition
 - Pop! OS keyboard shortcuts
 - Fish Shortcuts
 
-## Key software
+## Key software (in order of installation)
 
-- Autokey
-- VS code
+(handled by setup.sh)
+
+- Timeshift
 - Konsole
 - Fish
+- Docker
+- VS Code
 - Brave browser
-- Timeshift
+
+(user does this manually)
+
+- Autokey
+- VS Code preferences
 
 ### App development
 
