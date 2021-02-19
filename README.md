@@ -37,3 +37,7 @@ Backup
 Restore:
 
 `dconf load /org/gnome/shell/extensions/pop-shell/ < pop-shell.ini`
+
+## ssh-keys
+
+Manually cp from your usb

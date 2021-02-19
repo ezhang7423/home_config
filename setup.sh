@@ -29,6 +29,13 @@ blue 'adding pop os shortcuts'
 `dconf load /org/gnome/shell/extensions/pop-shell/ < pop-shell.ini`
 rm pop-shell.ini
 
+blue 'personalizing background'
+mkdir -p ~/Pictures/Wallpapers
+mv lelouch.jpg ~/Pictures/Wallpapers
+eval LELOUCH_URL='file://$HOME/Pictures/Wallpapers/lelouch.jpg'
+gsettings set org.gnome.desktop.background picture-uri $LELOUCH_URL
+
+
 green 'installing dev tools'
 sudo apt update && sudo apt upgrade -y 
 
@@ -59,7 +66,7 @@ sudo add-apt-repository \
 sudo apt-get update
 sudo apt-get install -y docker-ce docker-ce-cli docker-compose containerd.io    
 sudo docker run hello-world
-# setup docker non root
+# setup docker non root in the future?
 
 blue 'installing vscode'
 sudo apt install -y snap
@@ -72,6 +79,14 @@ curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt
 echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 sudo apt update
 sudo apt install brave-browser
+
+blue 'personalizing gnome theme'
+sudo apt install -y gnome-themes-extra gtk2-engines-murrine gnome-tweaks
+git clone git@github.com:vinceliuice/Orchis-theme.git theme
+./theme/install.sh -t grey
+rm -rf theme
+red 'Open "tweaks" and select "Orchis-dark-compact" under Appearance/Themes/Applications'
+
 
 # Remove .git (do this after stable)
 # rm -rf .git
