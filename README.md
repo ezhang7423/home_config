@@ -17,7 +17,12 @@ This contains all my personalization for a custom linux distribuition
 - Brave browser
 - Timeshift
 
-## Backing up Pop! os shortcuts (untested)
+### App development
+
+- Flutter
+- Android Studio
+
+## Backing up Pop! os shortcuts
 
 Backup
 `dconf dump /org/gnome/shell/extensions/pop-shell/ > pop-shell.ini`
