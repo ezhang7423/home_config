@@ -21,6 +21,15 @@ blue() { cd ~; echo "${blue}* $1 \n${reset}"; }
 magenta() {  echo "${magenta}* $1 \n${reset}"; }
 cyan() {  echo "${cyan}* $1 \n${reset}"; }
 
+
+blue 'installing timeshift'
+sudo apt update && sudo apt upgrade -y 
+sudo add-apt-repository -y ppa:teejee2008/timeshift
+sudo apt-get update
+sudo apt-get install timeshift
+red 'Run timeshift to configure. I recommend enabling daily, weekly, and monthly backups.'
+
+
 blue 'chmoding personalbin'
 cd .personalbin
 chmod +x gc gd gi gp
@@ -37,7 +46,6 @@ gsettings set org.gnome.desktop.background picture-uri $LELOUCH_URL
 
 
 green 'installing dev tools'
-sudo apt update && sudo apt upgrade -y 
 
 blue 'installing git'
 sudo apt install -y git
@@ -71,7 +79,6 @@ sudo docker run hello-world
 blue 'installing vscode'
 sudo apt install -y snap
 sudo snap install code --classic
-
 
 blue 'installing brave'
 sudo apt install apt-transport-https curl gnupg
