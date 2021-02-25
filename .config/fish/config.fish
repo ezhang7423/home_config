@@ -7,11 +7,12 @@ direnv hook fish | source
 alias c 'xclip -selection clipboard'
 alias start 'xdg-open'
 alias hal 'ls -hal'
+alias v 'source venv/bin/activate.fish'
 
 # variables
 export EDITOR='/usr/bin/vim'
 #set PATH ~/.personalbin $PATH
-set PATH ~/.personalbin ~/flutter/bin $PATH
+set PATH ~/.personalbin ~/flutter/bin ~/.npm-global/bin $PATH
 
 # function fish_prompt
 #     history -a
