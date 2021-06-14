@@ -64,6 +64,7 @@ sudo apt install -y xclip
 blue 'installing konsole'
 sudo apt install -y konsole
 gsettings set org.gnome.desktop.default-applications.terminal exec konsole
+rsync -av .local
 
 blue 'installing fish'
 sudo apt install -y fish
