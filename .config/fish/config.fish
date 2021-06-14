@@ -1,8 +1,3 @@
-# direnv
-direnv hook fish | source
-
-
-
 # alaises
 alias c 'xclip -selection clipboard'
 alias start 'xdg-open'
