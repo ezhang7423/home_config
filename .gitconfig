@@ -1,3 +1,7 @@
 [user]
-	name = Eddie Zhang
-	email = ezhang7423@student.palomar.edu
+        name = ezhang7423
+        email = ezhang7423@student.palomar.edu
+
+[includeIf "gitdir:~/plato/"]
+        path = ~/.gitconfig-work
+
