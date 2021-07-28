@@ -52,3 +52,7 @@ Restore:
 ## ssh-keys
 
 Manually cp from your usb
+
+https://stackoverflow.com/questions/7927750/specify-an-ssh-key-for-git-push-for-a-given-domain
+
+for personal and work projects
