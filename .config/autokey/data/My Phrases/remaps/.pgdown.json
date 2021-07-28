@@ -4,7 +4,7 @@
     "modes": [
         3
     ],
-    "usageCount": 0,
+    "usageCount": 5,
     "prompt": false,
     "omitTrigger": false,
     "matchCase": false,
@@ -20,10 +20,9 @@
     "hotkey": {
         "modifiers": [
             "<alt>",
-            "<ctrl>",
-            "<shift>"
+            "<ctrl>"
         ],
-        "hotKey": "k"
+        "hotKey": "a"
     },
     "filter": {
         "regex": null,

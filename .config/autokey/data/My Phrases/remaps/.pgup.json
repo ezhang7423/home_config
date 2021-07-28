@@ -20,10 +20,9 @@
     "hotkey": {
         "modifiers": [
             "<alt>",
-            "<ctrl>",
-            "<shift>"
+            "<ctrl>"
         ],
-        "hotKey": "i"
+        "hotKey": "q"
     },
     "filter": {
         "regex": null,
