@@ -1,6 +1,17 @@
+# TODO: add asdf
+
 # Home
 
 This contains all my personalization for a custom linux distribuition
+
+## Installation
+
+```bash
+cd ~
+git clone git@github.com:ezhang7423/home_config.git tmp
+cp -a tmp/. .
+# rm -rf tmp if satisfied
+```
 
 ## Items
 
