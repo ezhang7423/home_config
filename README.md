@@ -40,14 +40,14 @@ cp -a tmp/. .
 - Flutter
 - Android Studio
 
-## Backing up Pop! os shortcuts
+## Backing up custom gnome settings
 
 Backup
-`dconf dump /org/gnome/shell/extensions/pop-shell/ > pop-shell.ini`
+`dconf dump /org/gnome/ > gnome.ini`
 
 Restore:
 
-`dconf load /org/gnome/shell/extensions/pop-shell/ < pop-shell.ini`
+`dconf load /org/gnome/ < gnome.ini`
 
 ## ssh-keys
 
