@@ -56,7 +56,7 @@ sudo apt install -y python3-pip
 blue 'installing asdf'
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.1
 mkdir -p ~/.config/fish/completions; and ln -s ~/.asdf/completions/asdf.fish ~/.config/fish/completions
-source ~/.asdf/asdf.fish
+. $HOME/.asdf/asdf.sh
 
 blue 'installing python 3.8'
 asdf plugin add python
