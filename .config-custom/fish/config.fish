@@ -15,3 +15,4 @@ set PATH   ~/.local/bin  ~/.personalbin  ~/.cargo/bin ~/flutter/bin ~/.npm-globa
 # end
 
 alias v 'source venv/bin/activate.fish'
+source ~/.asdf/asdf.fish

@@ -50,6 +50,34 @@ green 'installing dev tools'
 printf '\n'
 
 
+blue 'installing pip'
+sudo apt install -y python3-pip
+
+blue 'installing asdf'
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.1
+mkdir -p ~/.config/fish/completions; and ln -s ~/.asdf/completions/asdf.fish ~/.config/fish/completions
+source ~/.asdf/asdf.fish
+
+blue 'installing python 3.8'
+asdf plugin add python
+asdf install python 3.8
+asdf global python 3.8
+
+blue 'installing nodejs latest'
+asdf plugin add nodejs
+asdf install nodejs latest
+asdf global nodejs latest
+
+blue 'installing go latest'
+asdf plugin add go
+asdf install go latest
+asdf global go latest
+
+blue 'installing rust latest'
+asdf plugin add rust
+asdf install rust latest
+asdf global rust latest
+
 blue 'installing autokey'
 sudo apt install -y autokey-gtk
 
@@ -58,6 +86,7 @@ sudo apt install -y vim
 
 blue 'installing magic wormhole'
 pip3 install magic-wormhole
+asdf reshim
 
 blue 'installing git'
 sudo apt install -y git
