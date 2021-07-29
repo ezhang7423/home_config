@@ -102,8 +102,6 @@ curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt
 echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 sudo apt update
 sudo apt install -y brave-browser
-BRAVE=$(which brave-browser)
-sudo update-alternatives --install /usr/bin/x-www-browser x-www-browser $BRAVE 200
 
 blue 'merging .config folder'
 rsync -av .config-custom/* ~/.config/
