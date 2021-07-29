@@ -1,4 +1,6 @@
 #!/bin/bash
+rm README.md
+rm setup.sh
 
 # Terminal colors
 red_color=`tput setaf 1`
