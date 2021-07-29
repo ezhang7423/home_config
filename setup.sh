@@ -48,8 +48,15 @@ printf '\n'
 green 'installing dev tools'
 printf '\n'
 
+
+blue 'installing autokey'
+sudo apt install -y autokey-gtk
+
 blue 'installing vim'
 sudo apt install -y vim
+
+blue 'installing magic wormhole'
+pip3 install magic-wormhole
 
 blue 'installing git'
 sudo apt install -y git
@@ -94,6 +101,8 @@ curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt
 echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 sudo apt update
 sudo apt install -y brave-browser
+BRAVE=$(which brave-browser)
+sudo update-alternatives --install /usr/bin/x-www-browser x-www-browser $BRAVE 200
 
 blue 'merging .config folder'
 rsync -av .config-custom/* ~/.config/
