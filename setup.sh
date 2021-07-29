@@ -58,10 +58,10 @@ git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.1
 mkdir -p ~/.config/fish/completions; and ln -s ~/.asdf/completions/asdf.fish ~/.config/fish/completions
 . $HOME/.asdf/asdf.sh
 
-blue 'installing python 3.8'
+blue 'installing python .10'
 asdf plugin add python
-asdf install python 3.8
-asdf global python 3.8
+asdf install python 3.8.10
+asdf global python 3.8.10
 
 blue 'installing nodejs latest'
 asdf plugin add nodejs
