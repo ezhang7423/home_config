@@ -69,9 +69,9 @@ asdf install nodejs latest
 asdf global nodejs latest
 
 blue 'installing go latest'
-asdf plugin add go
-asdf install go latest
-asdf global go latest
+asdf plugin add golang
+asdf install golang latest
+asdf global golang latest
 
 blue 'installing rust latest'
 asdf plugin add rust
