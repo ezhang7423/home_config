@@ -1,6 +1,7 @@
 #!/bin/bash
 rm README.md
 rm setup.sh
+rm -rf .git
 
 # Terminal colors
 red_color=`tput setaf 1`
@@ -22,7 +23,7 @@ magenta() {  printf "${magenta_color}* $1 \n${reset_color}"; }
 cyan() {  printf "${cyan_color}* $1 \n${reset_color}"; }
 
 blue 'updating and upgrading apt'
-sudo apt update && sudo apt upgrade -y 
+sudo apt update && sudo apt upgrade -y --allow-downgrades
 
 blue 'installing timeshift'
 sudo add-apt-repository -y ppa:teejee2008/timeshift
@@ -123,3 +124,4 @@ blue 'adding pop os shortcuts, custom keyboard shortcuts, and other goodies'
 dconf load /org/gnome/ < gnome.ini
 rm gnome.ini
 
+sudo apt autoremove -y

@@ -25,6 +25,8 @@ sudo ./setup.sh
 # rm -rf tmp if satisfied
 ```
 
+Afterwards, logout and log back in and you should be all set
+
 ## Items
 
 - Konsole w/ autokey
