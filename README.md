@@ -6,10 +6,22 @@ This contains all my personalization for a custom linux distribuition
 
 ## Installation
 
+If on ubuntu, run this first:
+
+```bash
+sudo add-apt-repository ppa:system76/pop
+sudo apt update
+sudo apt install -y pop-desktop
+sudo reboot
+```
+
+To install my settings:
+
 ```bash
 cd ~
 git clone git@github.com:ezhang7423/home_config.git tmp
 cp -a tmp/. .
+./setup.sh
 # rm -rf tmp if satisfied
 ```
 

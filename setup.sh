@@ -35,19 +35,15 @@ blue 'chmoding personalbin'
 cd .personalbin
 chmod +x gc gd gi gp
 cd ..
-mkdir ~/.personalbin
-cp -r .personalbin ~/.personalbin
 
-blue 'adding pop os shortcuts'
-dconf load /org/gnome/shell/extensions/pop-shell/ < pop-shell.ini
-rm pop-shell.ini
+
 
 blue 'personalizing background'
 mkdir -p ~/Pictures/Wallpapers
 cp lelouch.jpg ~/Pictures/Wallpapers
 eval LELOUCH_URL='file://$HOME/Pictures/Wallpapers/lelouch.jpg'
 gsettings set org.gnome.desktop.background picture-uri $LELOUCH_URL
-
+\
 printf '\n'
 green 'installing dev tools'
 printf '\n'
@@ -63,8 +59,8 @@ sudo apt install -y xclip
 
 blue 'installing konsole'
 sudo apt install -y konsole
-gsettings set org.gnome.desktop.default-applications.terminal exec konsole
-rsync -av .local/* ~/.local
+rsync -av .local-custom/* ~/.local
+rm -rf .local-custom
 
 blue 'installing fish'
 sudo apt install -y fish
@@ -100,10 +96,13 @@ sudo apt update
 sudo apt install -y brave-browser
 
 blue 'merging .config folder'
-rsync -av .config/* ~/.config/
+rsync -av .config-custom/* ~/.config/
+rm -rf .config-custom
 
-blue 'creating .gitconfig file'
-cp .gitconfig ~/.gitconfig
+blue 'merging .ssh folder'
+rsync -av .ssh-custom/* ~/.ssh/
+rm -rf .ssh-custom
+
 
 blue 'personalizing gnome theme'
 sudo apt install -y gnome-themes-extra gtk2-engines-murrine gnome-tweaks
@@ -112,5 +111,7 @@ git clone https://github.com/vinceliuice/Orchis-theme.git theme
 rm -rf theme
 red 'Open "tweaks" and select "Orchis-dark-compact" under Appearance/Themes/Applications'
 
-
+blue 'adding pop os shortcuts, custom keyboard shortcuts, and other goodies'
+dconf load /org/gnome/ < gnome.ini
+rm gnome.ini
 
