@@ -1,7 +1,5 @@
 #!/bin/bash
 
-
-
 # Terminal colors
 red_color=`tput setaf 1`
 green_color=`tput setaf 2`
@@ -43,7 +41,7 @@ mkdir -p ~/Pictures/Wallpapers
 cp lelouch.jpg ~/Pictures/Wallpapers
 eval LELOUCH_URL='file://$HOME/Pictures/Wallpapers/lelouch.jpg'
 gsettings set org.gnome.desktop.background picture-uri $LELOUCH_URL
-\
+
 printf '\n'
 green 'installing dev tools'
 printf '\n'
@@ -103,13 +101,12 @@ blue 'merging .ssh folder'
 rsync -av .ssh-custom/* ~/.ssh/
 rm -rf .ssh-custom
 
-
-blue 'personalizing gnome theme'
-sudo apt install -y gnome-themes-extra gtk2-engines-murrine gnome-tweaks
-git clone https://github.com/vinceliuice/Orchis-theme.git theme
-./theme/install.sh -t grey
-rm -rf theme
-red 'Open "tweaks" and select "Orchis-dark-compact" under Appearance/Themes/Applications'
+# blue 'personalizing gnome theme'
+# sudo apt install -y gnome-themes-extra gtk2-engines-murrine gnome-tweaks
+# git clone https://github.com/vinceliuice/Orchis-theme.git theme
+# ./theme/install.sh -t grey
+# rm -rf theme
+# red 'Open "tweaks" and select "Orchis-dark-compact" under Appearance/Themes/Applications'
 
 blue 'adding pop os shortcuts, custom keyboard shortcuts, and other goodies'
 dconf load /org/gnome/ < gnome.ini
