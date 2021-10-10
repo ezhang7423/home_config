@@ -55,10 +55,11 @@ sudo apt install -y python3-pip
 
 blue 'installing asdf'
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.1
-mkdir -p ~/.config/fish/completions; and ln -s ~/.asdf/completions/asdf.fish ~/.config/fish/completions
+mkdir -p ~/.config/fish/completions
+ln -s ~/.asdf/completions/asdf.fish ~/.config/fish/completions
 . $HOME/.asdf/asdf.sh
 
-blue 'installing python .10'
+blue 'installing python 3.8.10'
 asdf plugin add python
 asdf install python 3.8.10
 asdf global python 3.8.10
@@ -111,7 +112,7 @@ sudo apt-get install -y \
     gnupg-agent \
     software-properties-common
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo add-apt-repository \
+sudo add-apt-repository -y \
     "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
     $(lsb_release -cs) \
     stable"
@@ -120,10 +121,16 @@ sudo apt-get install -y docker-ce docker-ce-cli docker-compose containerd.io
 sudo docker run hello-world
 # setup docker non root in the future?
 
+
 blue 'installing vscode'
-sudo apt install -y snap
+sudo apt install -y snapd
 sudo snap install code --classic
 sudo snap install code-insiders --classic
+sudo cp /var/lib/snapd/desktop/applications/*.desktop /usr/share/applications/
+
+blue 'installing hub'
+sudo snap install hub --classic
+
 
 blue 'installing brave'
 sudo apt install -y apt-transport-https curl gnupg

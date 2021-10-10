@@ -21,9 +21,11 @@ To install my settings:
 cd ~
 git clone git@github.com:ezhang7423/home_config.git tmp
 cp -a tmp/. .
-sudo ./setup.sh
+./setup.sh
 # rm -rf tmp if satisfied
 ```
+
+MAKE SURE TO CONFIGURE `timeshift, autokey, vs code.`
 
 Afterwards, logout and log back in and you should be all set
 

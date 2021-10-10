@@ -10,7 +10,7 @@ Host github.com
   HostName github.com
   User git
   AddKeysToAgent yes
-  IdentityFile ~/.ssh/ehzhang
+  IdentityFile ~/.ssh/ezhang
 
 Host *
   IdentitiesOnly yes
