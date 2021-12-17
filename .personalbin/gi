@@ -6,5 +6,6 @@ git init
 echo "# $1" > README.md
 git add .
 git commit -m "initial commit"
-hub create
-git push --set-upstream origin master
+shift
+hub create $@
+git push --set-upstream origin main
