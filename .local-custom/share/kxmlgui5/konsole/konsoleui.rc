@@ -63,7 +63,6 @@
   <Action name="focus-view-left" shortcut="Ctrl+J"/>
   <Action name="focus-view-right" shortcut="Ctrl+;"/>
   <Action name="new-tab" shortcut="Ctrl+T"/>
-  <Action name="new-window" shortcut="Ctrl+N"/>
   <Action name="split-view-left-right" shortcut="Alt+H"/>
   <Action name="split-view-top-bottom" shortcut="Alt+M"/>
  </ActionProperties>

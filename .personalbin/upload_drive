@@ -1,0 +1,5 @@
+#!/bin/bash
+
+zip -r all.zip $1
+mv all.zip $1/
+gdrive upload -p 1CDbzKiCgUDqimxPgWGbJbjc0ue1JHVXy -r $1

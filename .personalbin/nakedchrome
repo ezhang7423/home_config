@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo 'eddie.zhang@plato.systems/dVaifPF8T_wWnrMRx4T!yQchA.FEfx'
+
+/home/ezipe/.local/share/flatpak/exports/bin/org.chromium.Chromium http://localhost:3000 --disable-web-security --user-data-dir='/tmp/nakedchrome' &> /dev/null

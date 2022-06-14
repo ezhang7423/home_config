@@ -1,4 +1,4 @@
-# TODO: add asdf
+# TODO: add alacritty
 
 # Home
 

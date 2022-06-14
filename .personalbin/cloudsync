@@ -1,0 +1,10 @@
+#!/bin/bash
+# RClone Config file
+#RCLONE_CONFIG=/opt/rclone/rclone.conf
+#export RCLONE_CONFIG
+
+#exit if running
+if [[ "`pidof -x $(basename $0) -o %PPID`" ]]; then exit; fi
+
+export RCLONE_CONFIG=/home/eddie/.config/rclone/rclone.conf
+rclone sync /home/eddie/Sync gdrive:/ --verbose | tee /tmp/rclone-eddie.log
