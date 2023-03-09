@@ -1,6 +1,0 @@
-[user]
-        name = eddie
-        email = eddie.zhang@plato.systems
-
-[url "github-work:plato-systems/"]
-    insteadOf = git@github.com:plato-systems/
