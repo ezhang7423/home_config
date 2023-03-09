@@ -4,23 +4,23 @@ rm setup.sh
 rm -rf .git
 
 # Terminal colors
-red_color=`tput setaf 1`
-green_color=`tput setaf 2`
-yellow_color=`tput setaf 3`
-blue_color=`tput setaf 4`
-magenta_color=`tput setaf 5`
-jjcyan_color=`tput setaf 6`
-reset_color=`tput sgr0`
+red_color=$(tput setaf 1)
+green_color=$(tput setaf 2)
+yellow_color=$(tput setaf 3)
+blue_color=$(tput setaf 4)
+magenta_color=$(tput setaf 5)
+jjcyan_color=$(tput setaf 6)
+reset_color=$(tput sgr0)
 
-red() {  printf "${red_color}* $1 \n${reset}"; }
+red() { printf "${red_color}* $1 \n${reset}"; }
 
 # for headers (like h1 in html)
-green() {  printf "${green_color}* $1 \n${reset_color}"; }
-yellow() {  printf "${yellow_color}* $1 \n${reset_color}"; }
+green() { printf "${green_color}* $1 \n${reset_color}"; }
+yellow() { printf "${yellow_color}* $1 \n${reset_color}"; }
 # reset back to home directory
 blue() { printf "${blue_color}* $1 \n${reset_color}"; }
-magenta() {  printf "${magenta_color}* $1 \n${reset_color}"; }
-cyan() {  printf "${cyan_color}* $1 \n${reset_color}"; }
+magenta() { printf "${magenta_color}* $1 \n${reset_color}"; }
+cyan() { printf "${cyan_color}* $1 \n${reset_color}"; }
 
 blue 'updating and upgrading apt'
 sudo apt update && sudo apt upgrade -y --allow-downgrades
@@ -30,7 +30,6 @@ sudo add-apt-repository -y ppa:teejee2008/timeshift
 sudo apt-get update
 sudo apt-get install -y timeshift
 red 'Run timeshift to configure. I recommend enabling daily, weekly, and monthly backups.'
-
 
 blue 'chmoding personalbin'
 cd .personalbin
@@ -49,6 +48,11 @@ printf '\n'
 
 blue 'installing pip'
 sudo apt install -y python3-pip
+
+blue 'installing conda'
+wget -O conda.sh https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+bash conda.sh -b -p ~/.miniconda3
+rm conda.sh
 
 blue 'installing asdf'
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.1
@@ -86,7 +90,7 @@ sudo apt install -y xclip
 
 blue 'installing fish'
 sudo apt install -y fish
-sudo usermod -s `which fish` $USER
+sudo usermod -s $(which fish) $USER
 
 blue 'installing docker'
 sudo apt-get install -y \
@@ -101,10 +105,9 @@ sudo add-apt-repository -y \
     $(lsb_release -cs) \
     stable"
 sudo apt-get update
-sudo apt-get install -y docker-ce docker-ce-cli docker-compose containerd.io    
+sudo apt-get install -y docker-ce docker-ce-cli docker-compose containerd.io
 sudo docker run hello-world
 # setup docker non root in the future?
-
 
 blue 'installing vscode'
 sudo apt install -y snapd
@@ -135,7 +138,7 @@ rm -rf .ssh-custom
 # red 'Open "tweaks" and select "Orchis-dark-compact" under Appearance/Themes/Applications'
 
 blue 'adding pop os shortcuts, custom keyboard shortcuts, and other goodies'
-dconf load /org/gnome/ < gnome.ini
+dconf load /org/gnome/ <gnome.ini
 rm gnome.ini
 
 sudo apt autoremove -y

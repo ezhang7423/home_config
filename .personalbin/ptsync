@@ -1,0 +1,3 @@
+#!/bin/bash
+echo "rsync -ravm --include='*.pt' -f 'hide,! */' src dest"
+

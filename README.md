@@ -1,4 +1,4 @@
-# TODO: add asdf
+# TODO: add alacritty and copyq
 
 # Home
 
@@ -6,7 +6,7 @@ This contains all my personalization for a custom linux distribuition
 
 ## Installation
 
-If on ubuntu, run this first:
+If on ubuntu 20.04, run this first:
 
 ```bash
 sudo add-apt-repository ppa:system76/pop
@@ -19,7 +19,7 @@ To install my settings:
 
 ```bash
 cd ~
-git clone git@github.com:ezhang7423/home_config.git tmp
+https://github.com/ezhang7423/home_config.git
 cp -a tmp/. .
 ./setup.sh
 # rm -rf tmp if satisfied

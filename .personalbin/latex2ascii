@@ -1,0 +1,5 @@
+#!/bin/bash
+
+pdf2ps $1
+ps2ascii $1.ps > $1.txt
+rm $1.ps
