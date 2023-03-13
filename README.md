@@ -1,4 +1,4 @@
-# TODO: add alacritty, zotero, obsidian, copyq
+# TODO: add alacritty, zotero, [obsidian](https://github.com/mgmeyers/obsidian-zotero-integration), copyq
 
 # Home
 
