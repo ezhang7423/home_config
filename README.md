@@ -1,4 +1,4 @@
-# TODO: add alacritty
+# TODO: add alacritty, zotero, obsidian
 
 # Home
 
