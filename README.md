@@ -15,6 +15,12 @@ sudo apt install -y pop-desktop
 sudo reboot
 ```
 
+If on ubuntu 22.04 or later, install
+https://github.com/pop-os/shell
+https://github.com/pop-os/launcher
+
+
+
 To install my settings:
 
 ```bash
