@@ -3,10 +3,11 @@ alias c 'xclip -selection clipboard'
 alias start 'xdg-open'
 alias l 'ls -hal'
 alias hal 'ls -hal'
-alias v 'source venv/bin/activate.fish'
-alias rl 'source ~/.rl/bin/activate.fish'
-alias run_py 'nodemon -x "python3 main.py" -e py'
 alias f 'cd $FIRST_PATH'
+alias s 'wormhole send'
+alias r 'wormhole receive'
+alias ipython 'ipython --no-confirm-exit'
+alias run_py 'nodemon -x "python3 main.py" -e py'
 
 bind \e, begin-selection
 bind \e. end-selection
@@ -18,7 +19,9 @@ export D4RL_SUPPRESS_IMPORT_ERROR=1
 
 set -x -p PATH ~/.local/bin ~/.personalbin ~/.cargo/bin ~/flutter/bin ~/.npm-global/bin
 set FIRST_PATH (pwd -P)
-set -x -p LD_LIBRARY_PATH /home/ezipe/.mujoco/mjpro150/bin /home/ezipe/.mujoco/mujoco210/bin
+set -x -p LD_LIBRARY_PATH /home/ezipe/.mujoco/mjpro150/bin /home/ezipe/.mujoco/mujoco210/bin /home/ezipe/.mujoco/mujoco200/bin /home/ezipe/.mujoco/mujoco200_linux/bin 
+
+direnv hook fish | source
 
 # functions
 function swap

@@ -60,11 +60,6 @@ mkdir -p ~/.config/fish/completions
 ln -s ~/.asdf/completions/asdf.fish ~/.config/fish/completions
 . $HOME/.asdf/asdf.sh
 
-blue 'installing python 3.8.10'
-asdf plugin add python
-asdf install python 3.8.10
-asdf global python 3.8.10
-
 blue 'installing nodejs latest'
 asdf plugin add nodejs
 asdf install nodejs latest
@@ -76,9 +71,7 @@ asdf install golang latest
 asdf global golang latest
 
 blue 'installing rust latest'
-asdf plugin add rust
-asdf install rust latest
-asdf global rust latest
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 blue 'installing autokey'
 sudo apt install -y autokey-gtk
@@ -88,18 +81,12 @@ sudo apt install -y vim
 
 blue 'installing magic wormhole'
 pip3 install magic-wormhole
-asdf reshim
 
 blue 'installing git'
 sudo apt install -y git
 
 blue 'installing xclip'
 sudo apt install -y xclip
-
-blue 'installing konsole'
-sudo apt install -y konsole
-rsync -av .local-custom/* ~/.local
-rm -rf .local-custom
 
 blue 'installing fish'
 sudo apt install -y fish
@@ -127,9 +114,6 @@ sudo apt install -y snapd
 sudo snap install code --classic
 sudo snap install code-insiders --classic
 sudo cp /var/lib/snapd/desktop/applications/*.desktop /usr/share/applications/
-
-blue 'installing hub'
-sudo snap install hub --classic
 
 blue 'installing brave'
 sudo apt install -y apt-transport-https curl gnupg

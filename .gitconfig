@@ -1,9 +1,20 @@
 [user]
         name = ezhang7423
         email = ezhang7423@student.palomar.edu
-
-[includeIf "gitdir:~/plato/"]
-        path = ~/.gitconfig-work
-
 [init]
-        defaultBranch = main
+	defaultBranch = main
+[color]
+	ui = auto
+[pull]
+	rebase = false
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[core]
+	editor = vim
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[credential]
+	helper = store
