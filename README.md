@@ -1,5 +1,5 @@
 # TODO: add alacritty, zotero, [obsidian](https://github.com/mgmeyers/obsidian-zotero-integration), copyq
-
+[more](https://github.com/hans/obsidian-citation-plugin)
 # Home
 
 This contains all my personalization for a custom linux distribuition
