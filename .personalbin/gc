@@ -1,2 +1,6 @@
 #!/bin/bash
-git add -A && git commit -m "$*"
+dir="$(basename $1 .git)"
+mkdir $dir
+cd $dir
+git clone $1 main
+#git add -A && git commit -m "$*"
