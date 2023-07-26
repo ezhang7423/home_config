@@ -1,0 +1,15 @@
+#!/bin/bash
+set -e
+
+parent_path=$(pwd)
+
+for dir in $parent_path/*; do
+    if [ -d "${dir}" ]; then
+        echo "Merging in ${dir}"
+        cd "${dir}"
+
+        git add .; git commit -m "Merge $dir"; git push
+        
+        cd ..
+    fi
+done
