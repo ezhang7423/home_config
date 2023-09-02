@@ -150,3 +150,8 @@ dconf load /org/gnome/ <gnome.ini
 rm gnome.ini
 
 sudo apt autoremove -y
+
+
+blue 'install tailscale'
+curl -fsSL https://tailscale.com/install.sh | sh
+sudo tailscale up

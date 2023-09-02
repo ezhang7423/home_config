@@ -1,6 +1,4 @@
-# TODO: add zotero, [obsidian](https://github.com/mgmeyers/obsidian-zotero-integration), copyq
-
-[more](https://github.com/hans/obsidian-citation-plugin), tailscale
+# TODO: add zotero, [obsidian](https://github.com/mgmeyers/obsidian-zotero-integration), copyq, [more](https://github.com/hans/obsidian-citation-plugin)
 
 # Home
 
