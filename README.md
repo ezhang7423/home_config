@@ -1,4 +1,4 @@
-# TODO: add zotero, [obsidian](https://github.com/mgmeyers/obsidian-zotero-integration), copyq, [more](https://github.com/hans/obsidian-citation-plugin)
+# TODO: add copyq, zotero, [obsidian](https://github.com/mgmeyers/obsidian-zotero-integration), [more](https://github.com/hans/obsidian-citation-plugin)
 
 # Home
 

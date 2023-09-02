@@ -44,11 +44,22 @@ gsettings set org.gnome.desktop.background picture-uri $LELOUCH_URL
 
 blue 'install alacritty'
 sudo add-apt-repository ppa:aslatter/ppa -y
-sudo apt install alacritty
+sudo apt update
+sudo apt install alacritty -y
 
+blue 'installing copyq'
+sudo add-apt-repository ppa:hluk/copyq -y
+sudo apt update
+sudo apt install copyq -y
 
 blue 'install nnn'
 sudo apt install nnn -y
+wget https://raw.githubusercontent.com/jarun/nnn/master/plugins/preview-tui
+chmod +x preview-tui
+mv preview-tui /home/ezipe/.config/nnn/plugins
+
+blue 'install tmux'
+sudo apt install tmux -y
 
 printf '\n'
 green 'installing dev tools'

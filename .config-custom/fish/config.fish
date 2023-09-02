@@ -1,6 +1,6 @@
 # aliases
 alias c 'xclip -selection clipboard'
-alias start 'xdg-open'
+alias start xdg-open
 alias l 'ls -hal'
 alias hal 'ls -hal'
 alias f 'cd $FIRST_PATH'
@@ -19,7 +19,7 @@ export D4RL_SUPPRESS_IMPORT_ERROR=1
 
 set -x -p PATH ~/.local/bin ~/.personalbin ~/.cargo/bin ~/flutter/bin ~/.npm-global/bin
 set FIRST_PATH (pwd -P)
-set -x -p LD_LIBRARY_PATH /home/ezipe/.mujoco/mjpro150/bin /home/ezipe/.mujoco/mujoco210/bin /home/ezipe/.mujoco/mujoco200/bin /home/ezipe/.mujoco/mujoco200_linux/bin 
+set -x -p LD_LIBRARY_PATH /home/ezipe/.mujoco/mjpro150/bin /home/ezipe/.mujoco/mujoco210/bin /home/ezipe/.mujoco/mujoco200/bin /home/ezipe/.mujoco/mujoco200_linux/bin
 
 direnv hook fish | source
 
@@ -41,8 +41,13 @@ source ~/.asdf/asdf.fish
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-eval /home/ezipe/.miniconda3/bin/conda "shell.fish" "hook" $argv | source
+eval /home/ezipe/.miniconda3/bin/conda "shell.fish" hook $argv | source
 # <<< conda initialize <<<
 test -n "$TMUX" && conda deactivate
 conda activate base
 
+
+export NNN_TMPFILE=/tmp/nnn_last_directory.txt
+export NNN_FIFO=/tmp/nnn.fifo
+export NNN_PLUG='c:!code $nnn;p:preview-tui;s:!echo $(pwd -P) > /tmp/n'
+alias n 'tmux new "nnn -Ana -P p $argv"; . $NNN_TMPFILE'
