@@ -1,5 +1,7 @@
-# TODO: add alacritty, zotero, [obsidian](https://github.com/mgmeyers/obsidian-zotero-integration), copyq
-[more](https://github.com/hans/obsidian-citation-plugin)
+# TODO: add zotero, [obsidian](https://github.com/mgmeyers/obsidian-zotero-integration), copyq
+
+[more](https://github.com/hans/obsidian-citation-plugin), tailscale
+
 # Home
 
 This contains all my personalization for a custom linux distribuition
@@ -18,8 +20,6 @@ sudo reboot
 If on ubuntu 22.04 or later, install
 https://github.com/pop-os/shell
 https://github.com/pop-os/launcher
-
-
 
 To install my settings:
 

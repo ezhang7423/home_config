@@ -42,6 +42,14 @@ cp lelouch.jpg ~/Pictures/Wallpapers
 eval LELOUCH_URL='file://$HOME/Pictures/Wallpapers/lelouch.jpg'
 gsettings set org.gnome.desktop.background picture-uri $LELOUCH_URL
 
+blue 'install alacritty'
+sudo add-apt-repository ppa:aslatter/ppa -y
+sudo apt install alacritty
+
+
+blue 'install nnn'
+sudo apt install nnn -y
+
 printf '\n'
 green 'installing dev tools'
 printf '\n'
