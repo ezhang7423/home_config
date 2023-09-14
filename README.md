@@ -23,7 +23,7 @@ To install my settings:
 
 ```bash
 cd ~
-https://github.com/ezhang7423/home_config.git tmp
+git clone https://github.com/ezhang7423/home_config.git tmp
 cp -a tmp/. .
 ./setup.sh
 # rm -rf tmp if satisfied
