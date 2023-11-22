@@ -51,3 +51,5 @@ export NNN_TMPFILE=/tmp/nnn_last_directory.txt
 export NNN_FIFO=/tmp/nnn.fifo
 export NNN_PLUG='c:!code $nnn;p:preview-tui;s:!echo $(pwd -P) > /tmp/n'
 alias n 'tmux new "nnn -Ana -P p $argv"; . $NNN_TMPFILE'
+
+export PYTHONBREAKPOINT=ipdb.set_trace
